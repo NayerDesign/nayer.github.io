@@ -1,0 +1,303 @@
+
+:root{
+    --div-height: 85vh;
+    --main-color:   #fff;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libra', sans-serif;
+    --btn-clr: #bbe1fa;
+    --btn-font-clr: #000000;
+    --btn-font-size: 1.5rem;
+    --eff: .3s all ease;  
+
+    /* YOU cand use any type for fix sizing of images fit to givin size*/
+    --bg-size:  100% 100%;
+    --bg-size:  cover;
+    --bg-size:  100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-para);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.icon-bar{
+    position: fixed;
+    top: -18%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    z-index: 10;
+}
+
+.icon-bar a{
+    text-decoration: none;
+    width: 22rem;
+    /* background: #220394; */
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5rem;
+    transform: translateX(-17.5rem);
+    -webkit-transform: translateX(-17.5rem);
+    -ms-transform: translateX(-17.5rem);
+   
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+}
+
+.facebook{
+    background: #001b72;
+}
+.twitter{
+    background: #5177f6;
+}
+
+.instagram{
+    background: #f03e3e;
+}
+
+.linkedin{
+    background: #011899;
+}
+
+.skype{
+    background: #0291d4;
+}
+
+a:hover{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+}
+
+.icon-bar a i{
+    padding-left: 1rem;
+    font-size: 3rem !important;
+    animation: letszoom 3s linear alternate-reverse infinite;
+}
+
+@keyframes letszoom{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+/* sticky end */
+
+
+/* bootstrap */
+
+
+
+body{
+    padding-bottom: 1rem;
+    background: rgb(216, 248, 128);
+}
+
+.center_div{
+width: 85vw;
+min-height: 80vh;
+margin: 5vh auto;
+}
+
+.center_div .top_div{
+    height: calc(var(--div-height) - 40vh);
+    background-size: var(--bg-size);
+}
+.center_div .top_div:first-child{
+    background-image: url(./img/inlytics-RJT2EWPR0d0-unsplash.jpg);
+}
+.center_div .top_div:last-child{
+    background-image: url(./img/morning.jpg);
+}
+
+.center_div .bottom_top__right{
+    height: calc(var(--div-height) - 50vh);
+    background-size: var(--bg-size);
+}
+.center_div .bottom_top__right{
+    background-image: url(./img/silvan-arnet-AwCoNBJtxbE-unsplash.jpg);
+    
+}
+
+.center_div .bottom_first{
+    height: calc(var(--div-height) - 30vh);    
+    background-size: var(--bg-size);
+}
+
+.center_div .bottom_first:first-child{
+    background-image: url(./img/jennifer-latuperisa-andresen-Cj7a21nHLyo-unsplash.jpg);
+}
+
+.center_div .bottom_first:last-child{
+    background-image: url(./img/nathana-reboucas-FqoZfD8DiMk-unsplash.jpg);
+}
+
+
+/* sideBar */
+
+p,
+label,
+input::placeholder{
+    font-size: 1.9rem;
+    line-height: 170%;
+    color: #01a725;
+}
+
+figure img,
+.fab,
+.fas{
+    transition: var(--eff);
+}
+
+a,
+a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* main page */
+
+.main_heading{
+    font-family: var(--title);
+    font-weight: bold;
+    font-size: 4rem;
+    color: #094e18;
+}
+
+.main_H_para{
+    font-size: 2rem;
+}
+
+.main_img{
+    height: calc(100vh - 40vh);
+    background-image: linear-gradient(to right, rgba(81, 19, 143, 0.5) 45%, rgba(250, 250, 250, 0)), url(./img/office.jpg);
+    background-size: 100% 100%;
+}
+
+.main_img p{
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: var(--title);
+    color: var(--main-color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.main_img h2{
+    font-weight: bold;
+    font-size: 6.5rem;
+    font-family: var(--title);
+    color: var(--main-color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 2rem;
+    transition: var(--eff);
+}
+.main_img div span{
+    font-family: var(--title);
+}
+
+
+.animateWorld div{
+    overflow: hidden;
+    position: relative;
+    float: right ;
+    height: 8rem;
+    padding: 1rem;
+    margin-top: -1rem;
+}
+.animateWorld div li{
+    font-weight: bold;
+    padding: 0 1rem;
+    height: 4.5rem;
+    margin-bottom: 4.5rem;
+    display: block;
+    font-family: var(--title);
+}
+
+.flip{
+    -webkit-animations: fliper 9s cubic-bezier(0.23, 1, 0.32, 1.2) infinite ;
+    animation: fliper 9s cubic-bezier(0.23, 1, 0.32, 1.2) infinite ;
+}
+
+@-webkit-keyframes fliper {
+    0%{
+        margin-top: -3.6rem;
+    }
+    5%{
+        margin-top: -2.7rem;
+    }
+    25%{
+        margin-top: -2.7rem;
+    }
+    30%{
+        margin-top: -1.8rem;
+    }
+    50%{
+        margin-top: -1.8rem;
+    }
+    55%{
+        margin-top: -1.9rem;
+    }
+    75%{
+        margin-top: -1.9rem;
+    }
+    80%{
+        margin-top: 0rem;
+    }
+    99.99%{
+        margin-top: 0rem;
+    }
+    100%{
+        margin-top: -2.7rem;
+    }
+}
+
+@keyframes fliper {
+    0%{
+        margin-top: -3.6rem;
+    }
+    5%{
+        margin-top: -2.7rem;
+    }
+    25%{
+        margin-top: -2.7rem;
+    }
+    30%{
+        margin-top: -1.8rem;
+    }
+    50%{
+        margin-top: -1.8rem;
+    }
+    55%{
+        margin-top: -1.9rem;
+    }
+    75%{
+        margin-top: -1.9rem;
+    }
+    80%{
+        margin-top: 0rem;
+    }
+    99.99%{
+        margin-top: 0rem;
+    }
+    100%{
+        margin-top: -2.7rem;
+    }
+}
+
+
+
+
